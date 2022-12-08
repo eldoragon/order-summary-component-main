@@ -1,0 +1,174 @@
+:root {
+    --primary-blue: hsl(245, 75%, 52%);
+    --primary-lightblue: hsl(225, 100%, 94%);
+
+    --neutral-white: hsl(225, 100%, 98%);
+    --neutral-gray: hsl(224, 23%, 55%);
+    --neutral-darkblue: hsl(223, 47%, 23%);
+
+    --fs-regular: 1rem;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-verybold: 900;
+
+    --ff-RHD: 'Red Hat Display', sans-serif;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  body {
+    font-family: var(--ff-RHD);
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-regular);
+    color: var(--neutral-gray);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-color: var(--primary-lightblue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.25rem;
+  }
+
+  @media (min-width: 400px){
+    body { 
+    background-image: url(images/pattern-background-desktop.svg);
+    background-color: var(--primary-lightblue);
+    background-size: contain;
+    }
+  }
+
+  .order__container {
+    background-color: white;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+}
+
+.order__content {
+    display: flex;
+    flex-direction: column;
+    margin: 1.75rem;
+}
+
+.order__title {
+    color: var(--neutral-darkblue);
+    font-weight: var(--fw-verybold);
+    text-align: center;
+}
+
+.order__text {
+    text-align: center;
+    padding: 0.75rem 1rem 1.5rem 1rem;
+    line-height: 1.5;
+}
+
+.order__flex-group {
+    background-color: var(--neutral-white);
+    border-radius: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.order__item-name {
+  color: var(--neutral-darkblue);
+  font-weight: var(--fw-verybold);
+}
+
+.order__item-edit {
+  color: var(--primary-blue);
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+}
+
+.order__button {
+  font-weight: var(--fw-verybold);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order__button-payment {
+  background-color: var(--primary-blue);
+  color: var(--neutral-white);
+  border: none;
+  border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;
+  -moz-border-radius: 0.75rem;
+  -ms-border-radius: 0.75rem;
+  -o-border-radius: 0.75rem;
+  padding: 1rem 1rem;
+  width: 100%;
+  -webkit-box-shadow: 0px 20px 24px -4px rgba(196,196,196,0.66); 
+  box-shadow: 0px 20px 24px -4px rgba(196,196,196,0.66);
+}
+
+.order__button-cancel-container {
+  display: flex;
+  justify-content: center;
+}
+
+.order__button-cancel {
+  color: var(--neutral-gray);
+  border: none;
+  background-color: transparent;
+  max-width: 100%;
+  margin: 0.25rem 0 ;
+}
+
+/* HOVER THIGS */
+.order__item-edit:is(:hover, :focus) {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.order__button-payment:is(:hover, :focus) {
+  cursor:pointer;
+  opacity: .7;
+}
+
+.order__button-cancel:is(:hover, :focus) {
+  cursor: pointer;
+  color: var(--neutral-darkblue);
+}
