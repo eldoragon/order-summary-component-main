@@ -52,12 +52,11 @@
     background-color: var(--primary-lightblue);
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1.25rem;
+    padding: 1.25rem;
   }
 
   @media (min-width: 400px){
